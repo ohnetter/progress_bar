@@ -43,6 +43,7 @@ class Progress {
         this.syncState();
         clearInterval(this.interval);
         this.intervalCode = 0;
+        this.redirect(); // Redirect once loading is complete
         return;
       }
       this.now += step;
@@ -54,6 +55,13 @@ class Progress {
     clearInterval(this.intervalCode);
     this.intervalCode = 0;
     this.syncState();
+    this.redirect(); // Redirect once loading is complete
+  }
+
+  // Redirect function
+  redirect() {
+    // Change the URL to the desired webpage
+    window.location.href = 'https://health.nativepath.com/special-offer-nativepath-collagen-1498';
   }
 }
 
